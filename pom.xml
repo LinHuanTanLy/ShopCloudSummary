@@ -27,7 +27,7 @@
         <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
         <spring-cloud-alibaba.version>2.1.1.RELEASE</spring-cloud-alibaba.version>
         <nacos.version>0.2.2.RELEASE</nacos.version>
-        <nacos-discovery.version>0.0.9.RELEASE</nacos-discovery.version>
+        <open-feign.version>2.2.2.RELEASE</open-feign.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -72,6 +72,11 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
                 <version>${nacos.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${open-feign.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

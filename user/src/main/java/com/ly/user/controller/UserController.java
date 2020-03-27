@@ -1,8 +1,7 @@
 package com.ly.user.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.ly.user.entity.UserEntity;
-import com.ly.user.mapper.UserMapper;
+import com.ly.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,11 +13,10 @@ import java.util.List;
 @RequestMapping("/api/user")
 public class UserController {
     @Autowired
-    UserMapper userMapper;
+    UserService users;
 
     @GetMapping("/")
     public List<UserEntity> users() {
-        QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<>();
-        return userMapper.selectList(queryWrapper);
+        return users.list();
     }
 }
