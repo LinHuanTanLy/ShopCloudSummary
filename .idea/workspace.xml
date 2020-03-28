@@ -2,33 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2c70475-5dc6-4e4b-9c2e-296fb6cd9be9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ly/order/client/ProductClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ly/order/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ly/order/entity/OrderEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ly/order/mapper/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ly/order/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ly/order/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ly/order/vo/OrderAddVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/ly/user/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/ly/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commom/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/commom/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/com/ly/order/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/com/ly/order/OrderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/target/classes/com/ly/order/OrderApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/order/target/classes/com/ly/order/OrderApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/ly/product/ProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/ly/product/ProductApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/ly/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/ly/product/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/ly/product/entity/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/commom/src/main/java/com/ly/commom/entity/ProductEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/ly/product/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/ly/product/mapper/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/ly/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/ly/product/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/ly/product/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/ly/product/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/target/classes/com/ly/product/ProductApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/product/target/classes/com/ly/product/ProductApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/target/classes/com/ly/product/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/product/target/classes/com/ly/product/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/target/classes/com/ly/product/entity/ProductEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/target/classes/com/ly/product/mapper/ProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/product/target/classes/com/ly/product/mapper/ProductMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/target/classes/com/ly/product/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/product/target/classes/com/ly/product/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/target/classes/com/ly/product/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/product/target/classes/com/ly/product/service/impl/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/ly/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/ly/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/bootstrap.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +62,7 @@
       <recent name="C:\projects\springbootCourse\ShopCloudDemo\product\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderApplication">
+  <component name="RunManager" selected="Spring Boot.ProductApplication">
     <configuration name="GateWayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="gateway" />
       <extension name="coverage">
@@ -140,9 +117,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.OrderApplication" />
         <item itemvalue="Spring Boot.ProductApplication" />
         <item itemvalue="Spring Boot.GateWayApplication" />
+        <item itemvalue="Spring Boot.OrderApplication" />
         <item itemvalue="Spring Boot.UserApplication" />
       </list>
     </recent_temporary>
@@ -170,6 +147,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585280402938</updated>
       <workItem from="1585280405843" duration="17700000" />
+      <workItem from="1585379476126" duration="621000" />
     </task>
     <servers />
   </component>
@@ -193,38 +171,38 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="605" y="143" key="#com.intellij.ide.util.MemberChooser/62.0.1474.864@62.0.1474.864" timestamp="1585301851533" />
-    <state width="1433" height="294" key="GridCell.Tab.0.bottom" timestamp="1585304521798">
+    <state width="1433" height="589" key="GridCell.Tab.0.bottom" timestamp="1585380144095">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1433" height="294" key="GridCell.Tab.0.bottom/62.0.1474.864@62.0.1474.864" timestamp="1585304521798" />
-    <state width="1433" height="294" key="GridCell.Tab.0.center" timestamp="1585304521798">
+    <state width="1433" height="589" key="GridCell.Tab.0.bottom/62.0.1474.864@62.0.1474.864" timestamp="1585380144095" />
+    <state width="1433" height="589" key="GridCell.Tab.0.center" timestamp="1585380144095">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1433" height="294" key="GridCell.Tab.0.center/62.0.1474.864@62.0.1474.864" timestamp="1585304521798" />
-    <state width="1433" height="294" key="GridCell.Tab.0.left" timestamp="1585304521798">
+    <state width="1433" height="589" key="GridCell.Tab.0.center/62.0.1474.864@62.0.1474.864" timestamp="1585380144095" />
+    <state width="1433" height="589" key="GridCell.Tab.0.left" timestamp="1585380144094">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1433" height="294" key="GridCell.Tab.0.left/62.0.1474.864@62.0.1474.864" timestamp="1585304521798" />
-    <state width="1433" height="294" key="GridCell.Tab.0.right" timestamp="1585304521798">
+    <state width="1433" height="589" key="GridCell.Tab.0.left/62.0.1474.864@62.0.1474.864" timestamp="1585380144094" />
+    <state width="1433" height="589" key="GridCell.Tab.0.right" timestamp="1585380144095">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1433" height="294" key="GridCell.Tab.0.right/62.0.1474.864@62.0.1474.864" timestamp="1585304521798" />
-    <state width="1433" height="294" key="GridCell.Tab.1.bottom" timestamp="1585304521800">
+    <state width="1433" height="589" key="GridCell.Tab.0.right/62.0.1474.864@62.0.1474.864" timestamp="1585380144095" />
+    <state width="1433" height="589" key="GridCell.Tab.1.bottom" timestamp="1585380144096">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1433" height="294" key="GridCell.Tab.1.bottom/62.0.1474.864@62.0.1474.864" timestamp="1585304521800" />
-    <state width="1433" height="294" key="GridCell.Tab.1.center" timestamp="1585304521798">
+    <state width="1433" height="589" key="GridCell.Tab.1.bottom/62.0.1474.864@62.0.1474.864" timestamp="1585380144096" />
+    <state width="1433" height="589" key="GridCell.Tab.1.center" timestamp="1585380144095">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1433" height="294" key="GridCell.Tab.1.center/62.0.1474.864@62.0.1474.864" timestamp="1585304521798" />
-    <state width="1433" height="294" key="GridCell.Tab.1.left" timestamp="1585304521798">
+    <state width="1433" height="589" key="GridCell.Tab.1.center/62.0.1474.864@62.0.1474.864" timestamp="1585380144095" />
+    <state width="1433" height="589" key="GridCell.Tab.1.left" timestamp="1585380144095">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1433" height="294" key="GridCell.Tab.1.left/62.0.1474.864@62.0.1474.864" timestamp="1585304521798" />
-    <state width="1433" height="294" key="GridCell.Tab.1.right" timestamp="1585304521800">
+    <state width="1433" height="589" key="GridCell.Tab.1.left/62.0.1474.864@62.0.1474.864" timestamp="1585380144095" />
+    <state width="1433" height="589" key="GridCell.Tab.1.right" timestamp="1585380144096">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1433" height="294" key="GridCell.Tab.1.right/62.0.1474.864@62.0.1474.864" timestamp="1585304521800" />
+    <state width="1433" height="589" key="GridCell.Tab.1.right/62.0.1474.864@62.0.1474.864" timestamp="1585380144096" />
     <state x="479" y="174" width="640" height="516" key="find.popup" timestamp="1585303304439">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
@@ -233,9 +211,9 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="196" y="93" key="new project wizard/62.0.1474.864@62.0.1474.864" timestamp="1585292846215" />
-    <state x="462" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1585304529559">
+    <state x="462" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1585379873615">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="462" y="181" width="672" height="678" key="search.everywhere.popup/62.0.1474.864@62.0.1474.864" timestamp="1585304529559" />
+    <state x="462" y="181" width="672" height="678" key="search.everywhere.popup/62.0.1474.864@62.0.1474.864" timestamp="1585379873615" />
   </component>
 </project>
