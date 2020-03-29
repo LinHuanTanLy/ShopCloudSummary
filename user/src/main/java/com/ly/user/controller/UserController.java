@@ -1,16 +1,17 @@
 package com.ly.user.controller;
 
-import com.ly.user.entity.UserEntity;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.ly.commom.bean.Resp;
+import com.ly.commom.entity.UserEntity;
 import com.ly.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.sql.Wrapper;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("")
 public class UserController {
     @Autowired
     UserService users;
@@ -18,5 +19,16 @@ public class UserController {
     @GetMapping("/")
     public List<UserEntity> users() {
         return users.list();
+    }
+
+
+    @GetMapping("/{userId}")
+    public UserEntity user(@PathVariable String userId) {
+        return users.getById(userId);
+    }
+
+    @PutMapping("/")
+    public boolean update(@RequestBody UserEntity userEntity) {
+        return users.updateUser(userEntity);
     }
 }

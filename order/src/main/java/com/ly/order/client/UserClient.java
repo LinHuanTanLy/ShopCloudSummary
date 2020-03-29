@@ -1,17 +1,20 @@
 package com.ly.order.client;
 
-import com.ly.commom.entity.ProductEntity;
+
+import com.ly.commom.bean.Resp;
+import com.ly.commom.entity.UserEntity;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient("product-service")
-public interface ProductClient {
-    @GetMapping("/api/product/{productId}")
-    ProductEntity findOne(@PathVariable Integer productId);
+@FeignClient("user-service")
+public interface UserClient {
 
-    @PutMapping("/api/product/")
-    boolean updateProduct(@RequestBody ProductEntity productEntity);
+    @GetMapping("/{userId}")
+    UserEntity user(@PathVariable Integer userId);
+
+    @PutMapping("/")
+    boolean update(@RequestBody UserEntity userEntity);
 }

@@ -1,10 +1,13 @@
-package com.ly.user.entity;
+package com.ly.commom.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -14,6 +17,7 @@ import java.time.LocalDateTime;
 @TableName("app_user")
 public class UserEntity implements Serializable {
     private static final long serialVersionUID = -2071565876962058344L;
+    @TableId(value = "id", type = IdType.INPUT)
     @ApiModelProperty(value = "主键ID", required = true)
     private Integer id;
     @ApiModelProperty(value = "用户名称", required = true)
@@ -54,4 +58,6 @@ public class UserEntity implements Serializable {
     private LocalDateTime update_time;
     @ApiModelProperty(value = "历史订单数")
     private Integer his_order_quantity;
+    @ApiModelProperty(value = "用户金额")
+    private BigDecimal balance;
 }

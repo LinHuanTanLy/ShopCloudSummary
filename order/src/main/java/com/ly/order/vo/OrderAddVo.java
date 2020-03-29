@@ -11,34 +11,16 @@ import java.time.LocalDateTime;
  */
 @Data
 public class OrderAddVo {
-    @ApiModelProperty(value = "订单号", required = true, hidden = true)
-    private String orderSn;
     @ApiModelProperty(value = "商品id", required = true)
-    private int productId;
-    @ApiModelProperty(value = "用户id", hidden = true)
-    private int userId;
+    private Integer product_id;
+    @ApiModelProperty(value = "用户id", required = true)
+    private Integer user_id;
     @ApiModelProperty(value = "数量", required = true)
-    private Integer productNum;
+    private Integer product_num;
     @ApiModelProperty(value = "店铺ID", required = true)
-    private Integer storeId;
+    private Integer store_id;
     @ApiModelProperty(value = "店铺编码", required = true)
-    private String storeCode;
-    @ApiModelProperty(value = "创建者", hidden = true)
-    private String creator;
-    @ApiModelProperty(value = "创建者ID", hidden = true)
-    private int creatorId;
-    @ApiModelProperty(value = "创建时间", hidden = true)
-    private LocalDateTime createdTime;
-    @ApiModelProperty(value = "更新用户", hidden = true)
-    private String lastOperator;
-    @ApiModelProperty(value = "更新用户Id", hidden = true)
-    private int lastOperatorId;
-    @ApiModelProperty(value = "更新时间", hidden = true)
-    private LocalDateTime updateTime;
-    @ApiModelProperty(value = "订单状态 0-未支付 1-已支付 2-已取消 3-已退款", hidden = true)
-    private Integer status;
-    @ApiModelProperty(value = "金额")
+    private String store_code;
+    @ApiModelProperty(value = "金钱")
     private BigDecimal price;
-    @ApiModelProperty(value = "是否删除 0-未删除 1-删除", hidden = true)
-    private Integer isDeleted;
 }

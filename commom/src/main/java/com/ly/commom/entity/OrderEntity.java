@@ -1,24 +1,30 @@
-package com.ly.order.entity;
+package com.ly.commom.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
  * 订单
  */
+@TableName("app_order")
 @Data
 public class OrderEntity implements Serializable {
+    @TableId(value = "id", type = IdType.INPUT)
     @ApiModelProperty(value = "主键ID", required = true)
-    private Long id;
+    private Integer id;
     @ApiModelProperty(value = "订单号", required = true)
     private String order_sn;
     @ApiModelProperty(value = "商品id", required = true)
-    private Long product_id;
+    private Integer product_id;
     @ApiModelProperty(value = "用户id", required = true)
-    private Long user_id;
+    private Integer user_id;
     @ApiModelProperty(value = "数量", required = true)
     private Integer product_num;
     @ApiModelProperty(value = "是否删除 0-未删除 1-删除", required = true)
@@ -30,7 +36,7 @@ public class OrderEntity implements Serializable {
     @ApiModelProperty(value = "创建者")
     private String creator;
     @ApiModelProperty(value = "创建者ID")
-    private Long creator_id;
+    private Integer creator_id;
     @ApiModelProperty(value = "创建时间")
     private LocalDateTime created_time;
     @ApiModelProperty(value = "更新用户")
@@ -41,4 +47,6 @@ public class OrderEntity implements Serializable {
     private LocalDateTime update_time;
     @ApiModelProperty(value = "订单状态 0-未支付 1-已支付 2-已取消 3-已退款")
     private Integer status;
+    @ApiModelProperty(value = "金钱")
+    private BigDecimal price;
 }
