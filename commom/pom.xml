@@ -47,6 +47,12 @@
             <version>2.6.1</version>
         </dependency>
         <!--end of swagger-->
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-all</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>

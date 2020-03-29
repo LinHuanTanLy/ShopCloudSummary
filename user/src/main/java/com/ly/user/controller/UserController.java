@@ -5,6 +5,7 @@ import com.ly.commom.bean.Resp;
 import com.ly.commom.entity.UserEntity;
 import com.ly.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.Wrapper;
@@ -28,6 +29,7 @@ public class UserController {
     }
 
     @PutMapping("/")
+    @Transactional
     public boolean update(@RequestBody UserEntity userEntity) {
         return users.updateUser(userEntity);
     }

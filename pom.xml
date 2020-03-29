@@ -78,6 +78,7 @@
                 <artifactId>spring-cloud-starter-openfeign</artifactId>
                 <version>${open-feign.version}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
     <dependencies>
