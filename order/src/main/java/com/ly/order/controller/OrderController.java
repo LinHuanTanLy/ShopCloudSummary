@@ -39,10 +39,10 @@ public class OrderController {
     }
 
 
-    @PostMapping("/sendEmail")
-    public Resp<String> sendEmail(@RequestParam("emailStr") String emailStr) {
+    @PostMapping("/sendMsg")
+    public Resp<String> sendEmail(@RequestParam("msgStr") String emailStr) {
         try {
-            rabbitTemplate.convertAndSend("email_exchange", "email_routekey", emailStr);
+            rabbitTemplate.convertAndSend(RabbitMQConfig.EMAIL_EXCHANGE, RabbitMQConfig.EMAIL_ROUTEKEY, emailStr);
             return Resp.ok("发送成功");
         } catch (AmqpException e) {
             e.printStackTrace();
@@ -52,9 +52,4 @@ public class OrderController {
 
 
 
-
-    @RabbitListener(queues = "email_routekey")
-    public void recMsg(String message) {
-        log.info("the message is " + message);
-    }
 }

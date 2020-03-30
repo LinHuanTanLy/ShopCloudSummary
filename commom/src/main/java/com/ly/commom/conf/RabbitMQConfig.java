@@ -8,6 +8,7 @@ import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -23,8 +24,11 @@ public class RabbitMQConfig {
 
     @Autowired
     private Environment env;
-    public static String EMAIL_EXCHANGE = "email_exchange";
-    public static String EMAIL_ROUTEKEY = "email_routekey";
+
+    @Value("mq.exchange")
+    public static final String EMAIL_EXCHANGE = "email_exchange";
+    @Value("mq.routekey")
+    public static final String EMAIL_ROUTEKEY = "email_routekey";
 
     @Bean
     public ConnectionFactory connectionFactory() {
