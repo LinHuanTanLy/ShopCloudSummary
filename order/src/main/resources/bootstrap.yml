@@ -6,6 +6,9 @@ spring:
       config:
         server-addr: 127.0.0.1:8848
         file-extension: yaml
+    alibaba:
+      seata:
+        tx-service-group: shop_cloud
   application:
     name: order-service
   profiles:

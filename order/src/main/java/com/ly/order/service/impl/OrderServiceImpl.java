@@ -52,6 +52,13 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderEntity> impl
         }
     }
 
+    /**
+     * 扣除库存
+     *
+     * @param orderAddVo
+     * @param productEntity
+     * @return
+     */
     @Transactional
     boolean subProductStockNum(OrderAddVo orderAddVo, ProductEntity productEntity) {
         productEntity.setStock_num(productEntity.getStock_num() - orderAddVo.getProduct_num());
@@ -60,6 +67,12 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderEntity> impl
         return updateProductRowNum;
     }
 
+    /**
+     * 更新用户信息  金额和历史下单数
+     *
+     * @param orderAddVo
+     * @param userEntity
+     */
     @Transactional
     void updateUserInfo(OrderAddVo orderAddVo, UserEntity userEntity) {
         //        4. 扣除用户金额数，更新历史下单数
@@ -73,6 +86,12 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderEntity> impl
         }
     }
 
+    /**
+     * 下单
+     *
+     * @param orderAddVo
+     * @param userEntity
+     */
     @Transactional
     void saveOrder(OrderAddVo orderAddVo, UserEntity userEntity) {
         //        3. 下单
@@ -97,6 +116,12 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderEntity> impl
         }
     }
 
+    /**
+     * 验证订单信息
+     *
+     * @param orderAddVo
+     * @return
+     */
     @Transactional
     ProductEntity vailProductInfo(OrderAddVo orderAddVo) {
         //        2. 拿到商品信息，校验是否存在以及是否库存足够
@@ -115,6 +140,12 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderEntity> impl
         return productEntity;
     }
 
+    /**
+     * 验证用户信息
+     *
+     * @param orderAddVo
+     * @return
+     */
     private UserEntity vailUserInfo(OrderAddVo orderAddVo) {
         //        1. 拿到用户信息，校验是否存在以及是否金额足够
         UserEntity userEntity = userClient.user(orderAddVo.getUser_id());
