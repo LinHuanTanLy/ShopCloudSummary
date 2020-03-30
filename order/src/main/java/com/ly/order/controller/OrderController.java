@@ -18,6 +18,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RequestMapping()
 @RestController
 @Slf4j
@@ -34,7 +36,7 @@ public class OrderController {
 
 
     @PostMapping("/save")
-    public Resp<String> saveOrder(@RequestBody OrderAddVo orderAddVo) {
+    public Resp<String> saveOrder(@Valid @RequestBody OrderAddVo orderAddVo) {
         orderService.createOrder(orderAddVo);
         return Resp.ok("下单成功");
     }
