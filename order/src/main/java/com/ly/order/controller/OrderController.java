@@ -2,6 +2,7 @@ package com.ly.order.controller;
 
 import com.ly.commom.bean.Resp;
 import com.ly.commom.conf.RabbitMQConfig;
+import com.ly.commom.exception.RException;
 import com.ly.commom.utils.rabbitUtils.ConnectionUtil;
 import com.ly.order.client.ProductClient;
 import com.ly.order.service.OrderService;
@@ -49,7 +50,6 @@ public class OrderController {
             return Resp.ok("发送失败");
         }
     }
-
 
 
 }
