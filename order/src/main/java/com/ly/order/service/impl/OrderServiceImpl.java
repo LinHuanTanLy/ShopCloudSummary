@@ -42,10 +42,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderEntity> impl
         UserEntity userEntity = vailUserInfo(orderAddVo);
         ProductEntity productEntity = vailProductInfo(orderAddVo);
         saveOrder(orderAddVo, userEntity);
-
         updateUserInfo(orderAddVo, userEntity);
-//        5. 扣除库存
-        int i = 1 / 0;
         boolean updateProductRowNum = subProductStockNum(orderAddVo, productEntity);
         if (!updateProductRowNum) {
             throw new RException("更新商品信息失败");
