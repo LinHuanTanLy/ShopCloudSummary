@@ -1,12 +1,20 @@
 package com.ly.order.controller;
 
 import com.ly.commom.bean.Resp;
-import com.ly.commom.entity.ProductEntity;
+import com.ly.commom.conf.RabbitMQConfig;
+import com.ly.commom.utils.rabbitUtils.ConnectionUtil;
 import com.ly.order.client.ProductClient;
 import com.ly.order.service.OrderService;
 import com.ly.order.vo.OrderAddVo;
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.AmqpException;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping()
@@ -20,14 +28,33 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
+    @Autowired
+    RabbitTemplate rabbitTemplate;
+
+
     @PostMapping("/save")
     public Resp<String> saveOrder(@RequestBody OrderAddVo orderAddVo) {
         orderService.createOrder(orderAddVo);
         return Resp.ok("下单成功");
-//        1. 查到商品信息
-//        int productId = orderAddVo.getProductId();
-//        ProductEntity productEntity = productClient.findOne(productId);
-//        log.info("the product is " + productEntity);
+    }
 
+
+    @PostMapping("/sendEmail")
+    public Resp<String> sendEmail(@RequestParam("emailStr") String emailStr) {
+        try {
+            rabbitTemplate.convertAndSend("email_exchange", "email_routekey", emailStr);
+            return Resp.ok("发送成功");
+        } catch (AmqpException e) {
+            e.printStackTrace();
+            return Resp.ok("发送失败");
+        }
+    }
+
+
+
+
+    @RabbitListener(queues = "email_routekey")
+    public void recMsg(String message) {
+        log.info("the message is " + message);
     }
 }
