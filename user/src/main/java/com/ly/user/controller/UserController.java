@@ -32,6 +32,13 @@ public class UserController {
         return users.getById(userId);
     }
 
+    @GetMapping("/{userName}")
+    public UserEntity userByUserName(@PathVariable String userName) {
+        QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_name", userName);
+        return users.getOne(queryWrapper);
+    }
+
     @PutMapping("/")
     public boolean update(@RequestBody UserEntity userEntity) {
         return users.updateUser(userEntity);
@@ -49,6 +56,12 @@ public class UserController {
             return Resp.fail("注册失败");
         }
     }
+
+    @PostMapping("/login")
+    public Resp<UserEntity> login(@RequestParam(value = "username") String userName, @RequestParam(value = "password") String password) {
+        return Resp.ok(users.login(userName, password));
+    }
+
 
     /**
      * 发送验证码

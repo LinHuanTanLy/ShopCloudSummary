@@ -6,8 +6,10 @@ import com.ly.commom.entity.UserEntity;
 public interface UserService extends IService<UserEntity> {
 
 
-    public boolean updateUser(UserEntity userEntity);
+    boolean updateUser(UserEntity userEntity);
 
 
     boolean register(String userName, String passWord, String verificationCode);
+
+    UserEntity login(String userName, String passWord);
 }

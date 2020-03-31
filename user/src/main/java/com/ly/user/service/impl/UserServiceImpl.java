@@ -1,5 +1,6 @@
 package com.ly.user.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ly.commom.entity.UserEntity;
 import com.ly.commom.exception.RException;
@@ -39,6 +40,19 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
         userEntity.setUser_name(userName);
         userEntity.setPassword(CommUtils.encode(passWord));
         return 1 == userMapper.insert(userEntity);
+    }
+
+    @Override
+    public UserEntity login(String userName, String passWord) {
+        String md5Password = CommUtils.encode(passWord);
+        QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_name", userName);
+        queryWrapper.eq("password", md5Password);
+        UserEntity userEntity = userMapper.selectOne(queryWrapper);
+        if (userEntity == null) {
+            throw new RException("账号或者密码错误，请确认后重试");
+        }
+        return userEntity;
     }
 
 
