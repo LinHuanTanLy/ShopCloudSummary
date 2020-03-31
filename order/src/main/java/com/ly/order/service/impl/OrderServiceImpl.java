@@ -6,7 +6,7 @@ import com.ly.commom.entity.OrderEntity;
 import com.ly.commom.entity.ProductEntity;
 import com.ly.commom.entity.UserEntity;
 import com.ly.commom.exception.RException;
-import com.ly.commom.utils.UuUtils;
+import com.ly.commom.utils.CommUtils;
 import com.ly.order.client.ProductClient;
 import com.ly.order.client.UserClient;
 import com.ly.order.mapper.OrderMapper;
@@ -102,7 +102,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderEntity> impl
         orderEntity.setCreator(userEntity.getUser_name());
         orderEntity.setLast_operator(userEntity.getUser_name());
         orderEntity.setIs_deleted(ShopConstant.isDelete.NORMAL);
-        orderEntity.setOrder_sn(UuUtils.getUUID());
+        orderEntity.setOrder_sn(CommUtils.getUUID());
         orderEntity.setStore_id(orderAddVo.getStore_id());
         orderEntity.setStore_code(orderAddVo.getStore_code());
         orderEntity.setStatus(ShopConstant.OrderStatus.NOT_PAYED);
